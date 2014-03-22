@@ -46,7 +46,7 @@ function toBrowser(namespace, name, compiled) {
  */
 function toCommonJS(name, compiled) {
   // 'module.exports = Ember.TEMPLATES["<%= name %>"] = <%= compiled %>'
-  return 'module.exports = Ember.TEMPLATES["'.concat(name, '"] = ', compiled);
+  return 'module.exports["'.concat(name, '"] = Ember.TEMPLATES["', name, '"] = ', compiled);
 }
 
 
